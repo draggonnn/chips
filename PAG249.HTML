@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maturador de Chip</title>
+    <link rel="stylesheet" href="PAG249.CSS">
+</head>
+
+<body>
+    <img src="MTF.jpg" width="350">
+    <div class="container">
+        <h1>CHIPS MATURADOS</h1>
+        <p>Transforme seus chips em um deleite delicioso com nosso maturador de chip premium.</p>
+        <div class="plans">
+            <div class="plan">
+                <h2>Plano Básico</h2>
+                <p>Transformação de chips para até 5 dispositivos</p>
+                <p>Preço: $249,90/mês</p>
+                <form action="checkout.php" method="POST">
+                    <input type="email" name="email" placeholder="Digite seu e-mail" required>
+                    <input type="text" name="endereco" placeholder="Digite seu endereço" required>
+                    <select name="metodo_pagamento" required>
+                        <option value="" disabled selected>Selecione o método de pagamento</option>
+
+                        <option value="paypal">PIX</option>
+
+                    </select>
+                    <button>
+                        <a href="PIX249.HTML" class="buy-button">COMPRAR</a>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
