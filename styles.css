@@ -1,69 +1,23 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #fa1dca;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
+header{
+    background-color: black;
+    color: aliceblue;
     text-align: center;
-    background-color: #05fdaa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
 }
-
-.image-container {
-    margin-bottom: 20px;
+body{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    padding: 1rem;
 }
-
-.image {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-}
-
-.button-container button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #007bff;
-    border: none;
+.container-buy-button{
+    background-color: darkgreen;
+    display: inline-block;
+    color: ghostwhite;
+    padding: 0.75rem 1.5rem;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
 }
-
-.button-container button:hover {
-    background-color: #0056b3;
-}
-button{
-    padding: 10px 20px;
-        font-size: 16px;
-        color: white;
-        background-color: #09e02d;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-
-}
-.div-button{
-    padding: 10px 20px;
-        font-size: 16px;
-        color: white;
-        background-color: #09e02d;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-
-}
+    
