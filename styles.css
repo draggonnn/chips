@@ -20,4 +20,15 @@ body{
     font-size: 1rem;
     text-align: center;
 }
+.buy-button{
+    display: inline-block;
+        background: #28a745;
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1rem;
+        text-align: center;
+        animation: reverse;
+}
     
