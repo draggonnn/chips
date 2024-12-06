@@ -1,13 +1,49 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.buy-btn');
+let currentSlide = 0; // Slide inicial
+const slides = document.querySelector('.slides');
+const totalSlides = document.querySelectorAll('.slide').length;
 
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            const card = button.closest('.card');
-            const value = card.getAttribute('data-value');
-            const price = card.querySelector('p').innerText;
+// Adiciona indicadores dinâmicos
+const indicatorsContainer = document.querySelector('.indicators');
+for (let i = 0; i < totalSlides; i++) {
+    const indicator = document.createElement('div');
+    indicator.dataset.index = i;
+    indicator.addEventListener('click', () => goToSlide(i));
+    indicatorsContainer.appendChild(indicator);
+}
+updateIndicators();
 
-            alert(`Você escolheu comprar ${value} seguidores por ${price}.`);
-        });
+// Função para trocar de slide
+function changeSlide(direction) {
+    currentSlide += direction;
+
+    // Voltar ao início ou ao último slide
+    if (currentSlide >= totalSlides) currentSlide = 0;
+    if (currentSlide < 0) currentSlide = totalSlides - 1;
+
+    updateSlider();
+}
+
+// Atualiza o slider e os indicadores
+function updateSlider() {
+    const offset = -currentSlide * 100; // Deslocamento horizontal
+    slides.style.transform = `translateX(${offset}%)`;
+    updateIndicators();
+}
+
+function updateIndicators() {
+    const indicators = document.querySelectorAll('.indicators div');
+    indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentSlide);
     });
-});
+}
+
+// Vai diretamente para um slide específico
+function goToSlide(index) {
+    currentSlide = index;
+    updateSlider();
+}
+
+// Autoplay (troca automática de slides a cada 5 segundos)
+setInterval(() => {
+    changeSlide(1);
+}, 5000);
