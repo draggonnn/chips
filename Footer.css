@@ -1,0 +1,132 @@
+.footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 60px 0 20px;
+  margin-top: 80px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h3.footer-title {
+  color: var(--secondary-color);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Logo e descrição */
+.footer-logo {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.footer-logo .logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  background: linear-gradient(135deg, white, var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-description {
+  color: #b8c5d1;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  max-width: 300px;
+}
+
+/* Redes sociais */
+.footer .social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer .social-link {
+  color: #b8c5d1;
+  transition: color 0.3s ease;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer .social-link:hover {
+  color: var(--secondary-color);
+  background-color: rgba(255, 215, 0, 0.1);
+}
+
+/* Links */
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #b8c5d1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--secondary-color);
+}
+
+/* Copyright */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  text-align: center;
+  color: #b8c5d1;
+}
+
+.footer-bottom p {
+  margin-bottom: 5px;
+}
+
+.footer-note {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-description {
+    max-width: none;
+  }
+
+  .footer .social-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .footer-content {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  .footer-section:last-child {
+    grid-column: 2 / 4;
+  }
+}
+
