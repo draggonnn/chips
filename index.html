@@ -1,108 +1,167 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Avançado com Slide de Fotos</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>MedicaNet - Controle Total do Seu Tempo na Cama</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <img src="LOGO BRANCO SEM FUNDO.png" alt="">
-        <img src="LOGOMARCA BRANCA SEM FUNDO.png" alt="">
-        <br>
-        <div>
-            <h1>a melhor plataformas de
-                <BR></BR>
-                <span style="background-color: deeppink;">ENTRETENIMENTO EXCLUSILVO</span>
-    
-                
-            </h1>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">MedicaNet</h1>
+            <p class="tagline">Solução Segura e Testada por Especialistas</p>
         </div>
-        <video controls src="https://video.wixstatic.com/video/7b91fd_e17656c184ce4fbb96a744d3496fc897/720p/mp4/file.mp4" type="video/mp4 controls" height="300" width="300" autoplay loop muted playsinline
-            id="vid">
-        </video>
     </header>
-    <div>
-        <a href="https://go.perfectpay.com.br/PPU38CPAL6H" class="buy-button">QUERO AÇESSO</a>
-    </div>
-    <br>
-    <div>
-        <span style="background-color: deeppink;">todas as plataformasem um so lugar</span>
-        <P style="color: aqua;">POR APENAS 10,90</P>
 
-        
-    </div>
-   
-    <div class="gallery">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-        <div class="card">
-            <img src="logo/CLOSE FRIENDS.png" alt="" width="100" height="100">
+            <h1 class="headline">Você dura menos de 5 minutos na cama? Faça o teste e descubra como resolver em 7 dias!</h1>
+            <p class="subheadline">Diga adeus à vergonha no sexo com nossa fórmula exclusiva testada por especialistas</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="number">+7.300</span>
+                    <span class="text">homens já usaram com sucesso</span>
+                </div>
+                <div class="stat">
+                    <span class="number">97%</span>
+                    <span class="text">de satisfação garantida</span>
+                </div>
+            </div>
         </div>
-        
-        <div class="card">
-            <img src="logo/FANSLY.png" alt="" width="100" height="100">
-        </div>
-        <div class="card">
-            <img src="logo/LOYALFANS.png" alt="" width="100" height="100">
-        </div>
-        </div>
-<br>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section" id="quiz">
         <div class="container">
-        <div class="card">
-            <img src="logo/MY CLUB.png" alt="" width="100" height="100">
-        </div>
-        <div class="card">
-            <img src="logo/ONLYFANS.png" alt="" width="100" height="100">
-        </div>
-        <div class="card">
-            <img src="logo/PATREON.png" alt="" width="100" height="100">
-        </div>
-        </div>
-    </div>
-    </div>
-    <DIv>
-        <H2>TODAS AS PERSONALIDADES FAMOSAS</H2>
-    </DIv>
-
-    <main>
-        <div class="slider">
-            <div class="slides">
-                <!-- Adicione as 13 fotos aqui -->
-                <div class="slide"><img src="7b91fd_1c75f46002f34c96aeedc82a8974f4f8~mv2.png" alt="Foto 1"></div>
-                <div class="slide"><img src="7b91fd_8c3743419a264edeb670065427087d45~mv2.png" alt="Foto 2"></div>
-                <div class="slide"><img src="7b91fd_15e94b985af342cb8f0c3befd70e351c~mv2.png" alt="Foto 3"></div>
-                <div class="slide"><img src="7b91fd_58d6d6be6c6a4645a1bf13cdedd7cc3f~mv2.png" alt="Foto 3"></div>
-                <div class="slide"><img src="7b91fd_95daa890af174c36aa3d1f59a895fb84~mv2.png" alt="Foto 3"></div>
-                <div class="slide"><img src="7b91fd_6275e461c4a54ca79ffefa8a9ab0d6bd~mv2.png" alt="Foto 3"></div>
-                <div class="slide"><img src="7b91fd_50427f1cd2bc4645a4a9091dba9ce012~mv2.png" alt="Foto 3"></div>
-                <div class="slide"><img src="7b91fd_70415f6057fb47a6a84c1a4cb7d8ed65~mv2.png" alt="Foto 3"></div>
-                <div class="slide"><img src="7b91fd_70415f6057fb47a6a84c1a4cb7d8ed65~mv2.png" alt="Foto 3"></div>
-                <div class="slide"><img src="7b91fd_26808804ce9f4c3ba895b1bb439017a2~mv2.png" alt="Foto 3"></div>
-                <div class="slide"><img src="7b91fd_2506871481cb4e2981a478660deed716~mv2.png" alt="Foto 3"></div>
-                <!-- ... até a foto 13 -->
-                <div class="slide"><img src="7b91fd_783298839022413ebb58182cb910a0b6~mv2.png" alt="Foto 13"></div>
+            <h2 class="quiz-title">Teste Rápido: Qual o Seu Nível de Urgência?</h2>
+            <p class="quiz-subtitle">Responda 5 perguntas simples e descubra o tratamento ideal para você</p>
+            
+            <div class="quiz-container">
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                
+                <div class="question-container" id="question-container">
+                    <!-- Questions will be loaded here by JavaScript -->
+                </div>
+                
+                <div class="quiz-navigation">
+                    <button class="btn-secondary" id="prev-btn" style="display: none;">Anterior</button>
+                    <button class="btn-primary" id="next-btn">Próxima</button>
+                </div>
             </div>
-            <br>
-            <div class="wrap">
-                <a href="https://go.perfectpay.com.br/PPU38CPAL6H" class="button">QUERO ACESSO</a>
+            
+            <!-- Quiz Result -->
+            <div class="quiz-result" id="quiz-result" style="display: none;">
+                <div class="result-content">
+                    <h3 class="result-title" id="result-title"></h3>
+                    <p class="result-description" id="result-description"></p>
+                    <div class="urgency-level" id="urgency-level"></div>
+                </div>
             </div>
-            <!-- Botões de navegação -->
-            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-            <button class="next" onclick="changeSlide(1)">&#10095;</button>
-
-            <!-- Indicadores -->
-            <div class="indicators"></div>
         </div>
-    </main>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 - Minha Galeria</p>
+    <!-- Product Section -->
+    <section class="product-section">
+        <div class="container">
+            <h2 class="section-title">Tratamento Completo MedicaNet</h2>
+            <div class="product-showcase">
+                <div class="product-image">
+                    <img src="tadala.jfif" alt="Tratamento Completo MedicaNet" id="product-img">
+                </div>
+                <div class="product-details">
+                    <h3>Kit Completo Inclui:</h3>
+                    <ul class="product-list">
+                        <li>✅ 1 frasco de Spray Anestésico</li>
+                        <li>✅ 1 frasco de Tadalafil + 5-HTP (comprimido)</li>
+                        <li>✅ Fórmula testada por especialistas</li>
+                        <li>✅ Resultados em até 7 dias</li>
+                        <li>✅ Controle total do seu tempo na cama</li>
+                    </ul>
+                    
+                    <div class="price-section">
+                        <div class="old-price">De: R$ 149,90</div>
+                        <div class="current-price">Por apenas: <span>R$ 89,90</span></div>
+                        <div class="discount-badge">40% OFF</div>
+                    </div>
+                    
+                    <div class="urgency-alert">
+                        <p>⚠️ <strong>ÚLTIMAS UNIDADES</strong> com frete grátis!</p>
+                        <p>Apenas <span id="stock-count">23</span> unidades restantes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Não Perca Mais Tempo!</h2>
+                <p>Garante já o seu tratamento e recupere sua confiança na cama</p>
+                <a href="https://app.pushinpay.com.br/service/pay/9f65e7fd-be65-426e-b0b1-fbd1958f332d" class="btn-cta" target="_blank">
+                    QUERO MEU TRATAMENTO AGORA
+                </a>
+                <div class="security-badges">
+                    <span>🔒 Compra 100% Segura</span>
+                    <span>📦 Frete Grátis</span>
+                    <span>💳 Parcelamento sem juros</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Funcionou mesmo! Em 1 semana já senti a diferença. Minha esposa ficou impressionada."</p>
+                    <div class="author">- Carlos M., 34 anos</div>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Produto de qualidade, chegou rápido e discreto. Recomendo para quem tem o mesmo problema."</p>
+                    <div class="author">- Roberto S., 28 anos</div>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Finalmente encontrei algo que funciona de verdade. Valeu cada centavo investido."</p>
+                    <div class="author">- André L., 41 anos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Última Chance!</h2>
+            <p>Não deixe a vergonha continuar atrapalhando sua vida íntima</p>
+            <a href="https://app.pushinpay.com.br/service/pay/9f65e7fd-be65-426e-b0b1-fbd1958f332d" class="btn-cta pulse" target="_blank">
+                GARANTIR MEU TRATAMENTO
+            </a>
+            <p class="guarantee">✅ Garantia de 30 dias ou seu dinheiro de volta</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 MedicaNet. Todos os direitos reservados.</p>
+            <p>Este produto não se destina a diagnosticar, tratar, curar ou prevenir qualquer doença.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>
+
