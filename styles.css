@@ -51,7 +51,7 @@ body {
 .logo h2 {
     color: #00ff00;
     font-weight: 700;
-    font-size: 1.8rem; /* Ajustado para telas menores */
+    font-size: 1.8rem;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
@@ -136,7 +136,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('hero_image_tatuador.png');
+    background-image: url('hero_image_marcos.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -194,116 +194,6 @@ body {
     box-shadow: 0 8px 25px rgba(0, 255, 0, 0.5);
 }
 
-/* Portfolio Section */
-.portfolio {
-    padding: 100px 0;
-    background: #111111;
-}
-
-.section-title {
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 1rem;
-    color: #ffffff;
-}
-
-.section-subtitle {
-    text-align: center;
-    font-size: 1.2rem;
-    opacity: 0.8;
-    margin-bottom: 4rem;
-}
-
-.portfolio-slider {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.slider-container {
-    position: relative;
-    height: 500px;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: all 0.5s ease;
-}
-
-.slide.active {
-    opacity: 1;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Alterado para 'contain' para centralizar melhor */
-    border-radius: 15px; /* Bordas arredondadas */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
-}
-
-.slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 255, 0, 0.8);
-    color: #ffffff;
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-    z-index: 10;
-}
-
-.slider-btn:hover {
-    background: #00ff00;
-    transform: translateY(-50%) scale(1.1);
-}
-
-.prev-btn {
-    left: 20px;
-}
-
-.next-btn {
-    right: 20px;
-}
-
-.slider-dots {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.dot.active {
-    background: #00ff00;
-    transform: scale(1.2);
-}
-
 /* About Section */
 .about {
     padding: 100px 0;
@@ -345,37 +235,50 @@ body {
     line-height: 1.8;
 }
 
-.stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
+/* Portfolio Section */
+.portfolio {
+    padding: 100px 0;
+    background: #111111;
 }
 
-.stat {
-    text-align: center;
-    padding: 1.5rem;
-    background: rgba(0, 255, 0, 0.1);
-    border-radius: 15px;
-    border: 1px solid rgba(0, 255, 0, 0.2);
-}
-
-.stat h3 {
-    font-size: 2.5rem;
+.section-title {
+    font-size: 3rem;
     font-weight: 700;
-    color: #00ff00;
-    margin-bottom: 0.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #ffffff;
 }
 
-.stat p {
-    font-size: 0.9rem;
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
     opacity: 0.8;
+    margin-bottom: 4rem;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-grid img:hover {
+    transform: scale(1.03);
 }
 
 /* Contact Section */
 .contact {
     padding: 100px 0;
-    background: #111111;
+    background: #0a0a0a;
 }
 
 .contact-content {
@@ -506,175 +409,98 @@ body {
 
 .social-links a:hover {
     background: #00ff00;
-    color: #ffffff;
+    color: #0a0a0a;
     transform: translateY(-2px);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    opacity: 0.6;
 }
 
 /* WhatsApp Float Button */
 .whatsapp-float {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background: #25d366;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366; /* Cor do WhatsApp */
     color: #ffffff;
     border-radius: 50%;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
-    text-decoration: none;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-    transition: all 0.3s ease;
+    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    animation: pulse 2s infinite;
+    transition: all 0.3s ease;
 }
 
 .whatsapp-float:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-    }
-    50% {
-        box-shadow: 0 4px 25px rgba(37, 211, 102, 0.8);
-    }
-    100% {
-        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-    }
-}
-
-/* Responsive Design */
+/* Responsividade */
 @media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgba(10, 10, 10, 0.98);
+        padding: 1rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
     .hamburger {
         display: flex;
     }
-    
-    .nav-menu {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background: rgba(10, 10, 10, 0.98);
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding-top: 2rem;
-        transition: left 0.3s ease;
-    }
-    
-    .nav-menu.active {
-        left: 0;
-    }
-    
+
     .social-icons {
-        display: none;
+        display: none; /* Esconder no mobile para não duplicar com o footer */
     }
-    
+
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .hero-subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .section-title {
-        font-size: 2.2rem;
-    }
-    
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: center;
-    }
-    
-    .stats {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .slider-btn {
-        width: 40px;
-        height: 40px;
         font-size: 1rem;
     }
-    
-    .prev-btn {
-        left: 10px;
+
+    .about-content,
+    .contact-content,
+    .footer-content {
+        grid-template-columns: 1fr;
     }
-    
-    .next-btn {
-        right: 10px;
+
+    .about-text .section-title {
+        text-align: center;
     }
-    
-    .whatsapp-float {
-        bottom: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-cta {
+        margin-top: 2rem;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
     }
 }
 
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-    
-    .cta-button {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-    }
-    
-    .section-title {
-        font-size: 1.8rem;
-    }
-    
-    .slider-container {
-        height: 300px;
-    }
-    
-    .about-image img {
-        height: 300px;
-    }
-}
 
