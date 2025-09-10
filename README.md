@@ -1,131 +1,111 @@
-# Marcos V Tattoo - Site Oficial
+# Site Marcos Vinícius Tattoo
 
-Site moderno e responsivo para o estúdio de tatuagem Marcos V Tattoo, desenvolvido com React, Tailwind CSS e componentes shadcn/ui.
+Uma cópia fiel do site de referência (filipeamorimtattoo.com) adaptada para Marcos Vinícius Tattoo.
 
-## 🎨 Características do Site
+## 🎨 Características
 
-- **Design Escuro e Moderno**: Inspirado no site de referência, com fundo escuro e detalhes em amarelo/dourado
-- **Totalmente Responsivo**: Funciona perfeitamente em desktop, tablet e mobile
-- **Seções Completas**:
-  - Header fixo com navegação suave
-  - Hero section impactante com call-to-action
-  - Galeria de portfólio com 8 imagens de tatuagens
-  - Seção "Sobre" destacando qualidade, segurança e exclusividade
-  - Informações de contato completas
-  - Footer profissional
-  - Botão flutuante do WhatsApp
+- **Design idêntico** ao site de referência
+- **Cores**: Preto, branco e dourado
+- **Layout**: One page com navegação suave
+- **Responsivo**: Funciona em desktop, tablet e mobile
+- **Integração WhatsApp**: Botões funcionais para contato
+- **Efeitos visuais**: Transições suaves e hover effects
 
-## 📱 Funcionalidades
+## 📱 Seções
 
-- **Navegação Suave**: Menu com scroll suave entre seções
-- **Integração WhatsApp**: Botões que abrem diretamente o WhatsApp com mensagem pré-definida
-- **Efeitos Visuais**: Hover effects, transições suaves e animações
-- **SEO Otimizado**: Título e meta tags configurados
+1. **Header fixo** - Logo e menu de navegação
+2. **Hero** - Título principal com CTA
+3. **Portfólio** - Grid masonry para fotos (12 espaços prontos)
+4. **Estatísticas** - Números em destaque
+5. **Sobre** - Informações sobre Marcos Vinícius
+6. **Contato** - Informações completas de contato
+7. **Footer** - Rodapé com links e direitos
 
-## 🚀 Como Executar
+## 🚀 Como usar
 
-### Pré-requisitos
-- Node.js (versão 18 ou superior)
-- npm ou pnpm
-
-### Instalação e Execução
+### Instalação
 ```bash
-# Navegar para o diretório do projeto
-cd marcos-v-tattoo
-
-# Instalar dependências (se necessário)
+cd marcos-vinicius-tattoo
 npm install
-
-# Executar em modo desenvolvimento
-npm run dev
-
-# O site estará disponível em http://localhost:5173
 ```
 
-### Build para Produção
+### Desenvolvimento
 ```bash
-# Gerar build de produção
+npm run dev
+```
+O site estará disponível em `http://localhost:5173`
+
+### Build para produção
+```bash
 npm run build
-
-# Os arquivos estarão na pasta 'dist'
 ```
 
-## 📁 Estrutura do Projeto
+## 📸 Adicionando suas fotos
 
-```
-marcos-v-tattoo/
-├── public/                 # Arquivos públicos
-├── src/
-│   ├── assets/            # Imagens de tatuagens (8 imagens incluídas)
-│   ├── components/        # Componentes React
-│   ├── App.jsx           # Componente principal
-│   ├── App.css           # Estilos customizados
-│   └── main.jsx          # Ponto de entrada
-├── index.html            # HTML principal
-├── package.json          # Dependências do projeto
-└── README.md            # Este arquivo
-```
-
-## 🎯 Informações de Contato Configuradas
-
-- **Endereço**: E bussiness rio verde, Quadra 97, lote 9, Avenida Rio Verde
-- **Telefone**: (62) 98320-8180
-- **Email**: oliveiramachado423@gmail.com
-- **WhatsApp**: Configurado para abrir automaticamente com mensagem pré-definida
-
-## 🖼️ Substituição de Imagens
-
-Para substituir as imagens do portfólio:
-
-1. Adicione suas imagens na pasta `src/assets/`
+1. Coloque suas fotos na pasta `src/assets/`
 2. Edite o arquivo `src/App.jsx`
-3. Substitua os imports das imagens (linhas 6-13)
-4. Atualize o array `portfolioImages` (linha 23)
+3. Substitua os placeholders na seção "Portfolio" pelas suas imagens
 
 Exemplo:
-```javascript
-// Substitua estas linhas
-import tattoo1 from './assets/UCZPm3qwtfW0.jpg'
-import tattoo2 from './assets/5B7X1oJdbFSM.jpg'
+```jsx
+// Substitua esta linha:
+const placeholderImages = Array(12).fill(null).map((_, i) => 
+  `https://images.unsplash.com/photo-${1580000000000 + i}?w=400&h=600&fit=crop&auto=format`
+)
 
-// Por suas próprias imagens
-import tattoo1 from './assets/minha-tatuagem-1.jpg'
-import tattoo2 from './assets/minha-tatuagem-2.jpg'
+// Por suas imagens:
+const portfolioImages = [
+  '/src/assets/tatuagem1.jpg',
+  '/src/assets/tatuagem2.jpg',
+  // ... suas fotos
+]
 ```
 
-## 🎨 Personalização
+## 🎯 Personalizações
 
-### Cores
-As cores principais estão definidas no Tailwind CSS:
-- **Fundo**: Preto (`bg-black`)
-- **Texto**: Branco (`text-white`)
-- **Destaque**: Amarelo (`text-yellow-400`)
-- **Botões CTA**: Verde (`bg-green-600`)
+### Alterando informações de contato
+Edite as variáveis no arquivo `src/App.jsx`:
+- `whatsappNumber`: Número do WhatsApp
+- `whatsappMessage`: Mensagem padrão
+- Seção de contato: Endereço, telefone, email
 
-### Conteúdo
-Para alterar textos, edite diretamente o arquivo `src/App.jsx` nas seções correspondentes.
+### Alterando cores
+As cores estão definidas no `src/App.css` e seguem o padrão:
+- Preto: `#000000`
+- Branco: `#ffffff`
+- Dourado: `#fbbf24` (yellow-400)
+- Verde WhatsApp: `#22c55e` (green-600)
 
-## 📱 Responsividade
+### Adicionando logo
+1. Coloque seu logo na pasta `src/assets/`
+2. Substitua o texto "Marcos Vinícius Tattoo" no header por uma tag `<img>`
 
-O site é totalmente responsivo e foi testado em:
-- Desktop (1920px+)
-- Tablet (768px - 1024px)
-- Mobile (320px - 767px)
+## 📞 Contato configurado
 
-## 🔧 Tecnologias Utilizadas
+- **Telefone**: (62) 98320-8180
+- **Email**: oliveiramachado423@gmail.com
+- **Endereço**: E bussiness rio verde, Quadra 97, lote 9, Avenida Rio Verde
+- **WhatsApp**: Configurado com mensagem automática
 
-- **React 18**: Framework JavaScript
-- **Vite**: Build tool e dev server
-- **Tailwind CSS**: Framework CSS utilitário
-- **shadcn/ui**: Componentes UI
-- **Lucide React**: Ícones
-- **Framer Motion**: Animações (disponível)
+## 🛠️ Tecnologias
 
-## 📞 Suporte
+- React 18
+- Vite
+- Tailwind CSS
+- Shadcn/ui
+- Lucide Icons
+- Framer Motion
 
-Para dúvidas sobre o código ou modificações, consulte a documentação do React e Tailwind CSS.
+## 📝 Notas
+
+- O site é uma cópia fiel do design original
+- Todos os links do WhatsApp estão funcionais
+- Layout totalmente responsivo
+- Otimizado para performance
+- Pronto para adicionar suas fotos reais
 
 ---
 
-**Desenvolvido com ❤️ para Marcos V Tattoo**
+**Desenvolvido para Marcos Vinícius Tattoo**  
+*Arte na pele com profissionalismo, segurança e exclusividade.*
 

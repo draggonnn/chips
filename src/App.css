@@ -119,24 +119,74 @@
   }
 }
 
+/* Custom styles para replicar o site Filipe Amorim Tattoo */
 
-/* Custom styles for Marcos V Tattoo */
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
+/* Typography similar ao site original */
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #000000;
+  color: #ffffff;
 }
 
-/* Hero section background animation */
-@keyframes backgroundShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* Header styles */
+.header-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-/* Smooth transitions for all interactive elements */
+/* Hero section styles */
+.hero-gradient {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+}
+
+/* Portfolio masonry grid styles */
+.portfolio-item {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+/* Statistics section gradient */
+.stats-gradient {
+  background: linear-gradient(90deg, #d97706 0%, #fbbf24 100%);
+}
+
+/* Button hover effects */
+.btn-hover {
+  transition: all 0.3s ease;
+}
+
+.btn-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* WhatsApp button pulse animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.whatsapp-float {
+  animation: pulse 2s infinite;
+}
+
+/* Smooth transitions for all elements */
 * {
   transition: all 0.3s ease;
 }
@@ -159,72 +209,35 @@ body {
   background: #f59e0b;
 }
 
-/* Portfolio image hover effects */
-.portfolio-image {
-  transition: transform 0.5s ease, filter 0.3s ease;
-}
-
-.portfolio-image:hover {
-  transform: scale(1.05);
-  filter: brightness(1.1);
-}
-
-/* Button hover animations */
-.btn-primary {
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-primary::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
-}
-
-.btn-primary:hover::before {
-  left: 100%;
-}
-
 /* Text glow effect for titles */
 .text-glow {
-  text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
 }
 
-/* Fade in animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
 }
 
-.fade-in-up {
-  animation: fadeInUp 0.8s ease-out;
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(251, 191, 36, 0.1);
 }
 
-/* Loading animation for images */
-.image-loading {
-  background: linear-gradient(90deg, #1f2937 25%, #374151 50%, #1f2937 75%);
-  background-size: 200% 100%;
-  animation: loading 1.5s infinite;
-}
-
-@keyframes loading {
+/* Loading animation for placeholders */
+@keyframes shimmer {
   0% {
-    background-position: 200% 0;
-  }
-  100% {
     background-position: -200% 0;
   }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.placeholder-shimmer {
+  background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
 }
 
 /* Mobile optimizations */
@@ -239,19 +252,26 @@ body {
   }
 }
 
-/* Dark theme enhancements */
-.dark-gradient {
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+/* Focus states for accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
 }
 
-/* Contact section styling */
-.contact-card {
-  background: linear-gradient(145deg, #1f2937, #111827);
-  border: 1px solid #374151;
+/* Gradient overlays */
+.gradient-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
 }
 
-.contact-card:hover {
-  border-color: #fbbf24;
-  box-shadow: 0 10px 25px rgba(251, 191, 36, 0.1);
+/* Section dividers */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #fbbf24, transparent);
 }
 
