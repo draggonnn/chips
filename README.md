@@ -1,111 +1,73 @@
-# Site Marcos Vinícius Tattoo
+# Welcome to your Lovable project
 
-Uma cópia fiel do site de referência (filipeamorimtattoo.com) adaptada para Marcos Vinícius Tattoo.
+## Project info
 
-## 🎨 Características
+**URL**: https://lovable.dev/projects/5e8d7d18-f29b-4bf8-a88e-1347877a5432
 
-- **Design idêntico** ao site de referência
-- **Cores**: Preto, branco e dourado
-- **Layout**: One page com navegação suave
-- **Responsivo**: Funciona em desktop, tablet e mobile
-- **Integração WhatsApp**: Botões funcionais para contato
-- **Efeitos visuais**: Transições suaves e hover effects
+## How can I edit this code?
 
-## 📱 Seções
+There are several ways of editing your application.
 
-1. **Header fixo** - Logo e menu de navegação
-2. **Hero** - Título principal com CTA
-3. **Portfólio** - Grid masonry para fotos (12 espaços prontos)
-4. **Estatísticas** - Números em destaque
-5. **Sobre** - Informações sobre Marcos Vinícius
-6. **Contato** - Informações completas de contato
-7. **Footer** - Rodapé com links e direitos
+**Use Lovable**
 
-## 🚀 Como usar
+Simply visit the [Lovable Project](https://lovable.dev/projects/5e8d7d18-f29b-4bf8-a88e-1347877a5432) and start prompting.
 
-### Instalação
-```bash
-cd marcos-vinicius-tattoo
-npm install
-```
+Changes made via Lovable will be committed automatically to this repo.
 
-### Desenvolvimento
-```bash
+**Use your preferred IDE**
+
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+Follow these steps:
+
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
+
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
-O site estará disponível em `http://localhost:5173`
 
-### Build para produção
-```bash
-npm run build
-```
+**Edit a file directly in GitHub**
 
-## 📸 Adicionando suas fotos
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-1. Coloque suas fotos na pasta `src/assets/`
-2. Edite o arquivo `src/App.jsx`
-3. Substitua os placeholders na seção "Portfolio" pelas suas imagens
+**Use GitHub Codespaces**
 
-Exemplo:
-```jsx
-// Substitua esta linha:
-const placeholderImages = Array(12).fill(null).map((_, i) => 
-  `https://images.unsplash.com/photo-${1580000000000 + i}?w=400&h=600&fit=crop&auto=format`
-)
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-// Por suas imagens:
-const portfolioImages = [
-  '/src/assets/tatuagem1.jpg',
-  '/src/assets/tatuagem2.jpg',
-  // ... suas fotos
-]
-```
+## What technologies are used for this project?
 
-## 🎯 Personalizações
+This project is built with:
 
-### Alterando informações de contato
-Edite as variáveis no arquivo `src/App.jsx`:
-- `whatsappNumber`: Número do WhatsApp
-- `whatsappMessage`: Mensagem padrão
-- Seção de contato: Endereço, telefone, email
-
-### Alterando cores
-As cores estão definidas no `src/App.css` e seguem o padrão:
-- Preto: `#000000`
-- Branco: `#ffffff`
-- Dourado: `#fbbf24` (yellow-400)
-- Verde WhatsApp: `#22c55e` (green-600)
-
-### Adicionando logo
-1. Coloque seu logo na pasta `src/assets/`
-2. Substitua o texto "Marcos Vinícius Tattoo" no header por uma tag `<img>`
-
-## 📞 Contato configurado
-
-- **Telefone**: (62) 98320-8180
-- **Email**: oliveiramachado423@gmail.com
-- **Endereço**: E bussiness rio verde, Quadra 97, lote 9, Avenida Rio Verde
-- **WhatsApp**: Configurado com mensagem automática
-
-## 🛠️ Tecnologias
-
-- React 18
 - Vite
+- TypeScript
+- React
+- shadcn-ui
 - Tailwind CSS
-- Shadcn/ui
-- Lucide Icons
-- Framer Motion
 
-## 📝 Notas
+## How can I deploy this project?
 
-- O site é uma cópia fiel do design original
-- Todos os links do WhatsApp estão funcionais
-- Layout totalmente responsivo
-- Otimizado para performance
-- Pronto para adicionar suas fotos reais
+Simply open [Lovable](https://lovable.dev/projects/5e8d7d18-f29b-4bf8-a88e-1347877a5432) and click on Share -> Publish.
 
----
+## Can I connect a custom domain to my Lovable project?
 
-**Desenvolvido para Marcos Vinícius Tattoo**  
-*Arte na pele com profissionalismo, segurança e exclusividade.*
+Yes, you can!
 
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
